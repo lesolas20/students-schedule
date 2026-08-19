@@ -1,0 +1,6 @@
+[schedule]
+url = "https://docs.google.com/spreadsheets/d/1234abcd/export?format=xlsx"
+display-url = "https://docs.google.com/spreadsheets/d/1234abcd"
+semester-start-date = 2026-09-01
+schedule-day-range-start = 0
+schedule-day-range-end = +120

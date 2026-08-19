@@ -1,0 +1,22 @@
+name: students-schedule
+
+services:
+  fetcher:
+    container_name: students-schedule-fetcher
+    build:
+      dockerfile: Containerfile
+      context: .
+      additional_contexts:
+        service: ../../service
+        library: ../../library
+    environment:
+      TZ: $TIMEZONE
+      TIMEZONE: $TIMEZONE
+      CONFIG_FILE: $CONFIG_FILE
+    networks:
+      - public
+    restart: unless-stopped
+
+networks:
+  public:
+    driver: bridge
