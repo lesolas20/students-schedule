@@ -484,7 +484,13 @@ def main() -> None:
 
     logger.debug(f"Loaded config {config}")
 
-    database = Database()
+    database = Database(
+        config.database.user,
+        config.database.password,
+        config.database.host,
+        config.database.port,
+        config.database.name,
+    )
 
     every(30).minutes.do(update, config=config, database=database)
 

@@ -13,10 +13,19 @@ services:
       TZ: $TIMEZONE
       TIMEZONE: $TIMEZONE
       CONFIG_FILE: $CONFIG_FILE
+      DB_USER: $DB_USER
+      DB_PASSWORD: $DB_PASSWORD
+      DB_HOST: $DB_HOST
+      DB_PORT: $DB_PORT
+      DB_NAME: $DB_NAME
     networks:
+      - internal
       - public
     restart: unless-stopped
 
 networks:
+  internal:
+    name: students-schedule-internal
+    external: true
   public:
     driver: bridge

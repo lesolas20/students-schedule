@@ -1,0 +1,21 @@
+name: students-schedule
+
+services:
+  database:
+    container_name: students-schedule-database
+    image: docker.io/library/postgres:18-trixie
+    environment:
+      POSTGRES_USER: $PSQL_USER
+      POSTGRES_PASSWORD: $PSQL_PASSWORD
+      PGDATA: /var/lib/postgresql/18/docker
+    volumes:
+      - ./postgresql/data:/var/lib/postgresql
+      - ./postgresql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - internal
+    restart: unless-stopped
+
+networks:
+  internal:
+    name: students-schedule-internal
+    external: true
