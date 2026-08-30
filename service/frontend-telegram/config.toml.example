@@ -1,0 +1,35 @@
+[schedule]
+display-url = "https://docs.google.com/spreadsheets/d/1234abcd"
+
+[render]
+border-width = 5
+background-color = "#DDDDDD"
+border-color = "#222222"
+text-color = "#111111"
+font-path = "RobotoMono-Regular.ttf"
+font-size = 24
+font-size-big = 72
+text-spacing = 5
+left-column-width = 220
+right-column-width = 500
+header-height = 70
+main-height = 1200
+text-line-max-width = 32
+day-off-text = "Вихідний"
+day-vacations-text = "Канікули"
+day-no-data-text = "Немає\nданих"
+
+[user-interface]
+groups = [
+  { subgroup = "КН-11-1", group = "КН-11", year = "Y1" },
+  { subgroup = "КН-11-2", group = "КН-11", year = "Y1" },
+  { subgroup = "ІСТ-11-1", group = "ІСТ-11", year = "Y1" },
+  { subgroup = "ІСТ-11-2", group = "ІСТ-11", year = "Y1" },
+  { subgroup = "ІСТ-11-3", group = "ІСТ-11", year = "Y1" },
+  { subgroup = "КНС-11", group = "КНС-11", year = "Y1" },
+
+  { subgroup = "КН-21-1", group = "КН-21", year = "Y2" },
+  { subgroup = "КН-21-2", group = "КН-21", year = "Y2" },
+  { subgroup = "ІСТ-21-1", group = "ІСТ-21", year = "Y2" },
+  { subgroup = "ІСТ-21-2", group = "ІСТ-21", year = "Y2" },
+]

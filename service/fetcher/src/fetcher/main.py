@@ -253,6 +253,10 @@ def _normalize_raw_class(r: RawClass) -> RawClass:
         # Remove repeating whitespace
         subject = re.sub(r"\s{2,}", " ", subject)
 
+        # Move class type onto its own line
+        subject = subject.replace(" (лекція)", "\nлекція")  # noqa: RUF001
+        subject = subject.replace(" (практика)", "\nпрактика")  # noqa: RUF001
+
     return RawClass(subject, professor, room, groups)
 
 
@@ -448,9 +452,9 @@ def update(config: Config, database: Database) -> None:
     days = []
 
     class_timings = {
-        0: ClassTimings("08:30", "10:20", "09:15", "09:25"),
+        0: ClassTimings("08:30", "10:10", "09:15", "09:25"),
         1: ClassTimings("10:20", "12:00", "11:05", "11:15"),
-        2: ClassTimings("12:10", "13:45", "13:55", "13:05"),
+        2: ClassTimings("12:10", "13:45", "12:55", "13:00"),
         3: ClassTimings("14:30", "16:10", "15:15", "15:25"),
         4: ClassTimings("16:20", "17:35", "17:05", "17:15"),
     }

@@ -1,0 +1,4 @@
+# Ignore generated locale files
+messages-auto.pot
+messages.pot
+*.mo

@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS users (
+  id INTEGER PRIMARY KEY,
+  "group" TEXT NOT NULL
+);

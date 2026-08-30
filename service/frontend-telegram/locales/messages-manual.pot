@@ -1,0 +1,69 @@
+msgid "January long"
+msgstr ""
+
+msgid "February long"
+msgstr ""
+
+msgid "March long"
+msgstr ""
+
+msgid "April long"
+msgstr ""
+
+msgid "May long"
+msgstr ""
+
+msgid "June long"
+msgstr ""
+
+msgid "July long"
+msgstr ""
+
+msgid "August long"
+msgstr ""
+
+msgid "September long"
+msgstr ""
+
+msgid "October long"
+msgstr ""
+
+msgid "November long"
+msgstr ""
+
+msgid "December long"
+msgstr ""
+
+msgid "Monday short"
+msgstr ""
+
+msgid "Tuesday short"
+msgstr ""
+
+msgid "Wednesday short"
+msgstr ""
+
+msgid "Thursday short"
+msgstr ""
+
+msgid "Friday short"
+msgstr ""
+
+msgid "Saturday short"
+msgstr ""
+
+msgid "Sunday short"
+msgstr ""
+
+msgid "Y1"
+msgstr ""
+
+msgid "Y2"
+msgstr ""
+
+msgid "Y3"
+msgstr ""
+
+msgid "Y4"
+msgstr ""
+

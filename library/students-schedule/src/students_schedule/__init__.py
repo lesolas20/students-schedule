@@ -9,8 +9,6 @@ from .schedule import (
     Professor,
     ScheduleDay,
     ClassTimings,
-    ScheduleWeek,
-    ScheduleMonth,
 )
 
 __all__ = [

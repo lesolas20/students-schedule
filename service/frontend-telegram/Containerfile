@@ -1,0 +1,31 @@
+FROM alpine:3.24 AS builder
+
+ENV UV_NO_DEV=1 \
+    UV_NO_CACHE=1 \
+    UV_LOCKED=1 \
+    UV_COMPILE_BYTECODE=1 \
+    UV_LINK_MODE=copy \
+    UV_PYTHON_PREFERENCE=only-managed \
+    UV_PYTHON_INSTALL_DIR=/python
+
+RUN apk add --no-cache ca-certificates tzdata
+
+COPY --from=ghcr.io/astral-sh/uv:0.12 /uv /uvx /bin/
+
+COPY --from=library /students-schedule /app/library/students-schedule
+COPY --from=library /utils /app/library/utils
+COPY --from=service /frontend-telegram /app/service/frontend-telegram
+
+WORKDIR /app/service/frontend-telegram
+
+RUN uv sync
+
+
+FROM alpine:3.24
+
+COPY --from=builder /python /python
+COPY --from=builder /app /app
+
+WORKDIR /app/service/frontend-telegram
+
+CMD [".venv/bin/python", "src/frontend_telegram/main.py"]

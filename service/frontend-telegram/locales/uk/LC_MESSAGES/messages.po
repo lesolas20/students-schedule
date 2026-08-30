@@ -1,0 +1,231 @@
+#: src/frontend_telegram/handlers.py:380
+#, python-brace-format
+msgid ""
+"Link to the data source:\n"
+"{url}"
+msgstr ""
+"Посилання на джерело даних:\n"
+"{url}"
+
+#: src/frontend_telegram/handlers.py:517 src/frontend_telegram/handlers.py:548
+#, python-brace-format
+msgid "Selected group {group}"
+msgstr "Обрано групу {group}"
+
+#: src/frontend_telegram/handlers.py:595
+msgid "Main menu text"
+msgstr "Головне меню"
+
+#. TR: help text should include full bot description
+#: src/frontend_telegram/handlers.py:603
+msgid "Help text"
+msgstr ""
+"Цей бот дозволяє переглядати свій розклад занять у чіткому та повному "
+"форматі"
+
+#: src/frontend_telegram/handlers.py:608
+msgid "Settings menu text"
+msgstr "Налаштування"
+
+#: src/frontend_telegram/handlers.py:617
+msgid "Year selection menu text"
+msgstr "Оберіть рік"
+
+#: src/frontend_telegram/handlers.py:633
+msgid "Group selection menu text"
+msgstr "Оберіть групу"
+
+#: src/frontend_telegram/handlers.py:648
+msgid "Subgroup selection menu text"
+msgstr "Оберіть підгрупу"
+
+#: src/frontend_telegram/handlers.py:662
+msgid "Select date menu text"
+msgstr "Оберіть дату"
+
+#: src/frontend_telegram/handlers.py:711
+msgid "Schedule image filename"
+msgstr "Розклад"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:37
+msgid "Schedule for today"
+msgstr "Сьогодні"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:44
+msgid "Schedule for tomorrow"
+msgstr "Завтра"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:51
+msgid "Schedule for this week"
+msgstr "Цей тиждень"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:58
+msgid "Schedule for the next week"
+msgstr "Наступний тиждень"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:65
+msgid "Schedule for this month"
+msgstr "Цей місяць"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:72
+msgid "Schedule for the next month"
+msgstr "Наступний місяць"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:79
+msgid "Schedule for the selected date"
+msgstr "Обрати дату"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:83
+msgid "Schedule for the selected range of dates"
+msgstr "Обрати проміжок дат"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:87
+msgid "Settings menu"
+msgstr "Налаштування"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:105
+msgid "Change group menu"
+msgstr "Змінити групу"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:109
+#: src/frontend_telegram/bot/keyboard/keyboard.py:131
+#: src/frontend_telegram/bot/keyboard/keyboard.py:148
+#: src/frontend_telegram/bot/keyboard/keyboard.py:190
+#: src/frontend_telegram/bot/keyboard/keyboard.py:241
+msgid "Cancel menu"
+msgstr "Скасувати"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:257
+#, python-brace-format
+msgid "Select date menu header {month} {year}"
+msgstr "{month} {year}"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:267
+msgid "Previous month"
+msgstr "Попередній місяць"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:279
+msgid "Following month"
+msgstr "Наступний місяць"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:289
+msgid "Show entire month"
+msgstr "Показати весь місяць"
+
+#. TR: This text should be as short as possible,
+#. preferably under 7 characters
+#: src/frontend_telegram/bot/keyboard/keyboard.py:365
+msgid "Show entire week"
+msgstr "Тижд."
+
+#: src/frontend_telegram/bot/utils/utils.py:208
+msgid "Bot name"
+msgstr "Розклад занять"
+
+#: src/frontend_telegram/bot/utils/utils.py:209
+msgid "Bot description"
+msgstr ""
+"Цей бот дозволяє переглядати свій розклад занять у чіткому та повному "
+"форматі"
+
+#: src/frontend_telegram/bot/utils/utils.py:210
+msgid "Bot short description"
+msgstr "Перегляд розкладу занять"
+
+#: src/frontend_telegram/bot/utils/utils.py:212
+msgid "/start command description"
+msgstr "запустити бота"
+
+#: src/frontend_telegram/bot/utils/utils.py:213
+msgid "/help command description"
+msgstr "допомога"
+
+#: src/frontend_telegram/bot/utils/utils.py:214
+msgid "/settings command description"
+msgstr "налаштування"
+
+#: src/frontend_telegram/bot/utils/utils.py:215
+msgid "/today command description"
+msgstr "розклад на сьогодні"
+
+#: src/frontend_telegram/bot/utils/utils.py:216
+msgid "/tomorrow command description"
+msgstr "розклад на завтра"
+
+#: src/frontend_telegram/bot/utils/utils.py:217
+msgid "/week command description"
+msgstr "розклад на цей тиждень"
+
+#: src/frontend_telegram/bot/utils/utils.py:218
+msgid "/month command description"
+msgstr "розклад на цей місяць"
+
+msgid "January long"
+msgstr "Січень"
+
+msgid "February long"
+msgstr "Лютий"
+
+msgid "March long"
+msgstr "Березень"
+
+msgid "April long"
+msgstr "Квітень"
+
+msgid "May long"
+msgstr "Травень"
+
+msgid "June long"
+msgstr "Червень"
+
+msgid "July long"
+msgstr "Липень"
+
+msgid "August long"
+msgstr "Серпень"
+
+msgid "September long"
+msgstr "Вересень"
+
+msgid "October long"
+msgstr "Жовтень"
+
+msgid "November long"
+msgstr "Листопад"
+
+msgid "December long"
+msgstr "Грудень"
+
+msgid "Monday short"
+msgstr "Пн"
+
+msgid "Tuesday short"
+msgstr "Вт"
+
+msgid "Wednesday short"
+msgstr "Ср"
+
+msgid "Thursday short"
+msgstr "Чт"
+
+msgid "Friday short"
+msgstr "Пт"
+
+msgid "Saturday short"
+msgstr "Сб"
+
+msgid "Sunday short"
+msgstr "Нд"
+
+msgid "Y1"
+msgstr "Перший курс"
+
+msgid "Y2"
+msgstr "Другий курс"
+
+msgid "Y3"
+msgstr "Третій курс"
+
+msgid "Y4"
+msgstr "Четвертий курс"
+

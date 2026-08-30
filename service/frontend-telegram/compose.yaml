@@ -1,0 +1,36 @@
+name: students-schedule
+
+services:
+  frontend-telegram:
+    container_name: students-schedule-frontend-telegram
+    build:
+      dockerfile: Containerfile
+      context: .
+      additional_contexts:
+        service: ../../service
+        library: ../../library
+    environment:
+      TZ: $TIMEZONE
+      TIMEZONE: $TIMEZONE
+      CONFIG_FILE: $CONFIG_FILE
+      BOT_TOKEN: $BOT_TOKEN
+      SCHEDULE_DB_USER: $SCHEDULE_DB_USER
+      SCHEDULE_DB_PASSWORD: $SCHEDULE_DB_PASSWORD
+      SCHEDULE_DB_HOST: $SCHEDULE_DB_HOST
+      SCHEDULE_DB_PORT: $SCHEDULE_DB_PORT
+      SCHEDULE_DB_NAME: $SCHEDULE_DB_NAME
+      LOCAL_DB_FILE: $LOCAL_DB_FILE
+      LOCAL_DB_INIT_SCRIPT: $LOCAL_DB_INIT_SCRIPT
+    volumes:
+      - ./database:/app/service/frontend-telegram/database
+    networks:
+      - internal
+      - public
+    restart: unless-stopped
+
+networks:
+  internal:
+    name: students-schedule-internal
+    external: true
+  public:
+    driver: bridge
