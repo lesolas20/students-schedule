@@ -2,10 +2,11 @@ container-engine := require("docker")
 compose-provider := require("docker")
 network-name := "students-schedule-internal"
 
-default:
-    @ just --list
+
+set default-list := true
 
 # Create and start the entire stack
+[group("start")]
 start:
     @ just create-network
     @ just start-database
@@ -13,6 +14,7 @@ start:
     @ just start-fetcher
 
 # Tear down the entire stack
+[group("stop")]
 stop:
     @ just stop-fetcher
     @ just stop-frontend-telegram
@@ -51,31 +53,37 @@ clean:
     @- just remove-network
 
 # Start the fetcher service
+[group("start")]
 [working-directory("service/fetcher")]
 start-fetcher:
     {{ compose-provider }} compose up --detach fetcher
 
 # Stop the fetcher service
 [working-directory("service/fetcher")]
+[group("stop")]
 stop-fetcher:
     {{ compose-provider }} compose down
 
 # Start the database service
+[group("start")]
 [working-directory("service/database")]
 start-database:
     {{ compose-provider }} compose up --detach database
 
 # Stop the database service
+[group("stop")]
 [working-directory("service/database")]
 stop-database:
     {{ compose-provider }} compose down
 
 # Start the Telegram BFF service
+[group("start")]
 [working-directory("service/frontend-telegram")]
 start-frontend-telegram:
     {{ compose-provider }} compose up --detach frontend-telegram
 
 # Stop the Telegram BFF service
+[group("stop")]
 [working-directory("service/frontend-telegram")]
 stop-frontend-telegram:
     {{ compose-provider }} compose down
