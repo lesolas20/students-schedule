@@ -8,8 +8,6 @@ ENV UV_NO_DEV=1 \
     UV_PYTHON_PREFERENCE=only-managed \
     UV_PYTHON_INSTALL_DIR=/python
 
-RUN apk add --no-cache ca-certificates tzdata
-
 COPY --from=ghcr.io/astral-sh/uv:0.12 /uv /uvx /bin/
 
 COPY --from=library /students-schedule /app/library/students-schedule
@@ -22,6 +20,8 @@ RUN uv sync
 
 
 FROM alpine:3.24
+
+RUN apk add --no-cache ca-certificates tzdata
 
 COPY --from=builder /python /python
 COPY --from=builder /app /app
