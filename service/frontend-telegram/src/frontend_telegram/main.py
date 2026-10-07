@@ -11,6 +11,7 @@ from frontend_telegram.config import load_config
 from frontend_telegram.database import LocalDatabase, ScheduleDatabase
 from frontend_telegram.handlers import router
 from frontend_telegram.bot.utils import setup_bot
+from frontend_telegram.middlewares import EventTimeoutMiddleware
 
 if __name__ == "__main__":
     setup_logging(logging.DEBUG)
@@ -38,6 +39,11 @@ if __name__ == "__main__":
     i18n = I18n(path=Path("locales"), default_locale="en")
     i18n_middleware = SimpleI18nMiddleware(i18n)
     i18n_middleware.setup(dispatcher)
+
+    event_timeout_middleware = EventTimeoutMiddleware(
+        event_timeout=config.misc.event_timeout,
+    )
+    dispatcher.message.outer_middleware(event_timeout_middleware)
 
     async def _run_bot() -> None:
         await setup_bot(bot, i18n)

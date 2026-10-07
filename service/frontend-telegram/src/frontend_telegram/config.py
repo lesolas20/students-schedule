@@ -5,6 +5,7 @@ import tomllib
 import traceback
 from typing import TYPE_CHECKING
 from pathlib import Path
+from datetime import timedelta as TimeDelta  # noqa: N812
 from dataclasses import dataclass
 
 from dotenv import load_dotenv
@@ -21,6 +22,11 @@ logger = logging.getLogger(__name__)
 @dataclass(frozen=True)
 class BotConfig:
     token: str
+
+
+@dataclass(frozen=True)
+class MiscellaneousConfig:
+    event_timeout: TimeDelta
 
 
 @dataclass(frozen=True)
@@ -50,12 +56,21 @@ class LocalDatabaseConfig:
 
 @dataclass(frozen=True)
 class Config:
+    misc: MiscellaneousConfig
     bot: BotConfig
     schedule: ScheduleConfig
     schedule_database: ScheduleDatabaseConfig
     local_database: LocalDatabaseConfig
     render: ScheduleDayRenderConfig
     ui: UIConfig
+
+
+def _load_miscellaneous_config(toml: Mapping) -> MiscellaneousConfig:
+    event_timeout_seconds = toml["miscellaneous"]["event-timeout-seconds"]
+
+    return MiscellaneousConfig(
+        event_timeout=TimeDelta(seconds=event_timeout_seconds),
+    )
 
 
 def _load_schedule_day_render_config(toml: Mapping) -> ScheduleDayRenderConfig:
@@ -139,6 +154,7 @@ def load_config() -> Config:
         config = tomllib.load(file)
 
     return Config(
+        misc=_load_miscellaneous_config(config),
         bot=BotConfig(token=bot_token),
         schedule=ScheduleConfig(display_url=config["schedule"]["display-url"]),
         schedule_database=ScheduleDatabaseConfig(

@@ -1,3 +1,6 @@
+[miscellaneous]
+event-timeout-seconds = 10
+
 [schedule]
 display-url = "https://docs.google.com/spreadsheets/d/1234abcd"
 
