@@ -1,4 +1,4 @@
-#: src/frontend_telegram/handlers.py:380
+#: src/frontend_telegram/handlers.py:112 src/frontend_telegram/handlers.py:391
 #, python-brace-format
 msgid ""
 "Link to the data source:\n"
@@ -7,114 +7,119 @@ msgstr ""
 "Link to the data source:\n"
 "{url}"
 
-#: src/frontend_telegram/handlers.py:517 src/frontend_telegram/handlers.py:548
+#: src/frontend_telegram/handlers.py:528 src/frontend_telegram/handlers.py:559
 #, python-brace-format
 msgid "Selected group {group}"
 msgstr "Selected group {group}"
 
-#: src/frontend_telegram/handlers.py:595
+#: src/frontend_telegram/handlers.py:606
 msgid "Main menu text"
 msgstr "Main menu"
 
 #. TR: help text should include full bot description
-#: src/frontend_telegram/handlers.py:603
+#: src/frontend_telegram/handlers.py:614
 msgid "Help text"
 msgstr ""
 "This bot allows you to view your class schedule in a clear and complete "
 "format"
 
-#: src/frontend_telegram/handlers.py:608
+#: src/frontend_telegram/handlers.py:619
 msgid "Settings menu text"
 msgstr "Settings"
 
-#: src/frontend_telegram/handlers.py:617
+#: src/frontend_telegram/handlers.py:628
 msgid "Year selection menu text"
 msgstr "Select a year"
 
-#: src/frontend_telegram/handlers.py:633
+#: src/frontend_telegram/handlers.py:644
 msgid "Group selection menu text"
 msgstr "Select a group"
 
-#: src/frontend_telegram/handlers.py:648
+#: src/frontend_telegram/handlers.py:659
 msgid "Subgroup selection menu text"
 msgstr "Select a subgroup"
 
-#: src/frontend_telegram/handlers.py:662
+#: src/frontend_telegram/handlers.py:673
 msgid "Select date menu text"
 msgstr "Select date"
 
-#: src/frontend_telegram/handlers.py:711
+#: src/frontend_telegram/handlers.py:722
 msgid "Schedule image filename"
 msgstr "Schedule.png"
 
-#: src/frontend_telegram/bot/keyboard/keyboard.py:37
+#: src/frontend_telegram/bot/keyboard/keyboard.py:38
 msgid "Schedule for today"
 msgstr "Today"
 
-#: src/frontend_telegram/bot/keyboard/keyboard.py:44
+#: src/frontend_telegram/bot/keyboard/keyboard.py:45
 msgid "Schedule for tomorrow"
 msgstr "Tomorrow"
 
-#: src/frontend_telegram/bot/keyboard/keyboard.py:51
+#: src/frontend_telegram/bot/keyboard/keyboard.py:52
 msgid "Schedule for this week"
 msgstr "This week"
 
-#: src/frontend_telegram/bot/keyboard/keyboard.py:58
+#: src/frontend_telegram/bot/keyboard/keyboard.py:59
 msgid "Schedule for the next week"
 msgstr "Next week"
 
-#: src/frontend_telegram/bot/keyboard/keyboard.py:65
+#: src/frontend_telegram/bot/keyboard/keyboard.py:66
 msgid "Schedule for this month"
 msgstr "This month"
 
-#: src/frontend_telegram/bot/keyboard/keyboard.py:72
+#: src/frontend_telegram/bot/keyboard/keyboard.py:73
 msgid "Schedule for the next month"
 msgstr "Next month"
 
-#: src/frontend_telegram/bot/keyboard/keyboard.py:79
+#: src/frontend_telegram/bot/keyboard/keyboard.py:80
 msgid "Schedule for the selected date"
 msgstr "Select date"
 
-#: src/frontend_telegram/bot/keyboard/keyboard.py:83
+#: src/frontend_telegram/bot/keyboard/keyboard.py:84
 msgid "Schedule for the selected range of dates"
 msgstr "Select dates range"
 
-#: src/frontend_telegram/bot/keyboard/keyboard.py:87
+#: src/frontend_telegram/bot/keyboard/keyboard.py:88
 msgid "Settings menu"
 msgstr "Settings"
 
-#: src/frontend_telegram/bot/keyboard/keyboard.py:105
+#: src/frontend_telegram/bot/keyboard/keyboard.py:92
+#, python-brace-format
+msgid "Link to the data source"
+msgstr "Link to the data source"
+
+#: src/frontend_telegram/bot/keyboard/keyboard.py:111
 msgid "Change group menu"
 msgstr "Change group"
 
-#: src/frontend_telegram/bot/keyboard/keyboard.py:109
-#: src/frontend_telegram/bot/keyboard/keyboard.py:131
-#: src/frontend_telegram/bot/keyboard/keyboard.py:148
-#: src/frontend_telegram/bot/keyboard/keyboard.py:190
-#: src/frontend_telegram/bot/keyboard/keyboard.py:241
+#: src/frontend_telegram/bot/keyboard/keyboard.py:115
+#: src/frontend_telegram/bot/keyboard/keyboard.py:137
+#: src/frontend_telegram/bot/keyboard/keyboard.py:154
+#: src/frontend_telegram/bot/keyboard/keyboard.py:196
+#: src/frontend_telegram/bot/keyboard/keyboard.py:247
 msgid "Cancel menu"
 msgstr "Cancel"
 
-#: src/frontend_telegram/bot/keyboard/keyboard.py:257
+#: src/frontend_telegram/bot/keyboard/keyboard.py:263
 #, python-brace-format
 msgid "Select date menu header {month} {year}"
 msgstr "{month} {year}"
 
-#: src/frontend_telegram/bot/keyboard/keyboard.py:267
+#: src/frontend_telegram/bot/keyboard/keyboard.py:273
 msgid "Previous month"
 msgstr "Previous month"
 
-#: src/frontend_telegram/bot/keyboard/keyboard.py:279
+#: src/frontend_telegram/bot/keyboard/keyboard.py:285
 msgid "Following month"
 msgstr "Following month"
 
-#: src/frontend_telegram/bot/keyboard/keyboard.py:289
+#: src/frontend_telegram/bot/keyboard/keyboard.py:295
 msgid "Show entire month"
 msgstr "Show entire month"
 
 #. TR: This text should be as short as possible,
 #. preferably under 7 characters
-#: src/frontend_telegram/bot/keyboard/keyboard.py:365
+#: src/frontend_telegram/bot/keyboard/keyboard.py:371
 msgid "Show entire week"
 msgstr "Week"
 
@@ -145,18 +150,22 @@ msgid "/settings command description"
 msgstr "settings"
 
 #: src/frontend_telegram/bot/utils/utils.py:215
+msgid "/source command description"
+msgstr "data source"
+
+#: src/frontend_telegram/bot/utils/utils.py:216
 msgid "/today command description"
 msgstr "today's schedule"
 
-#: src/frontend_telegram/bot/utils/utils.py:216
+#: src/frontend_telegram/bot/utils/utils.py:217
 msgid "/tomorrow command description"
 msgstr "tomorrow's schedule"
 
-#: src/frontend_telegram/bot/utils/utils.py:217
+#: src/frontend_telegram/bot/utils/utils.py:218
 msgid "/week command description"
 msgstr "this week's schedule"
 
-#: src/frontend_telegram/bot/utils/utils.py:218
+#: src/frontend_telegram/bot/utils/utils.py:219
 msgid "/month command description"
 msgstr "this month's schedule"
 

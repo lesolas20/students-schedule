@@ -212,6 +212,7 @@ async def _setup_bot(bot: Bot, i18n: I18n) -> None:
     cmd_start_desc = _("/start command description")
     cmd_help_desc = _("/help command description")
     cmd_settings_desc = _("/settings command description")
+    cmd_source_desc = _("/source command description")
     cmd_today_desc = _("/today command description")
     cmd_tomorrow_desc = _("/tomorrow command description")
     cmd_week_desc = _("/week command description")
@@ -221,6 +222,7 @@ async def _setup_bot(bot: Bot, i18n: I18n) -> None:
         BotCommand(command="start", description=cmd_start_desc),
         BotCommand(command="help", description=cmd_help_desc),
         BotCommand(command="settings", description=cmd_settings_desc),
+        BotCommand(command="source", description=cmd_source_desc),
         BotCommand(command="today", description=cmd_today_desc),
         BotCommand(command="tomorrow", description=cmd_tomorrow_desc),
         BotCommand(command="week", description=cmd_week_desc),

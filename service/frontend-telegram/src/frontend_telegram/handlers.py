@@ -104,6 +104,17 @@ async def command_settings(message: Message) -> None:
     await show_settings(message)
 
 
+@router.message(Command("source"))
+async def command_source(message: Message, config: Config) -> None:
+    fmsg = await format_message(message)
+    logger.info(f"Recieved /source command, message=({fmsg})")
+
+    text = _("Link to the data source:\n{url}").format(
+        url=config.schedule.display_url,
+    )
+    await message.answer(text)
+
+
 @router.message(Command("today"))
 async def command_today(
     message: Message,

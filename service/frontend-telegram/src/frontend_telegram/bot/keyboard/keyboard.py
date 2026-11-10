@@ -13,6 +13,7 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from frontend_telegram.bot.utils import (
     ScheduleUnit,
     DummyCallback,
+    SourceCallback,
     CancelMenuCallback,
     SelectYearCallback,
     SelectGroupCallback,
@@ -87,6 +88,10 @@ def main_menu() -> InlineKeyboardMarkup:
         text=_("Settings menu"),
         callback_data=SettingsMenuCallback().pack(),
     )
+    source_button = InlineKeyboardButton(
+        text=_("Link to the data source"),
+        callback_data=SourceCallback().pack(),
+    )
 
     return InlineKeyboardMarkup(
         inline_keyboard=[
@@ -96,6 +101,7 @@ def main_menu() -> InlineKeyboardMarkup:
             [select_date_button],
             # [select_date_range_button],
             [settings_button],
+            [source_button],
         ],
     )
 
