@@ -45,7 +45,7 @@ msgstr "Оберіть дату"
 
 #: src/frontend_telegram/handlers.py:711
 msgid "Schedule image filename"
-msgstr "Розклад"
+msgstr "Розклад.png"
 
 #: src/frontend_telegram/bot/keyboard/keyboard.py:37
 msgid "Schedule for today"
